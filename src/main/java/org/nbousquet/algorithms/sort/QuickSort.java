@@ -1,6 +1,9 @@
 package org.nbousquet.algorithms.sort;
 
+import jdk.jshell.execution.Util;
 import org.nbousquet.algorithms.common.Utils;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 public class QuickSort {
 
@@ -59,7 +62,10 @@ public class QuickSort {
      * @return index of the pivot of the partition
      */
     private static int partition(int[] array, int start, int end) {
-        // Choose the pivot and put it at the end
+        // We choose a random pivot and put it at the end of the range.
+        // This is to avoid the issue where a wrong pivot would make for bad performance O(N^2).
+        int randomPivotIndex = ThreadLocalRandom.current().nextInt(start, end + 1);
+        Utils.swap(array, randomPivotIndex, end);
         int pivotValue = array[end];
         // Found out all elements smaller and the pivot and put them at the begining.
         int nextSmallElementIndex = start;
