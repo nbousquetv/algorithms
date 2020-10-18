@@ -5,7 +5,7 @@ import org.nbousquet.algorithms.common.Utils;
 public class FusionSort {
 
     /**
-     * Sort the provide array in ascending order using insertion sort.
+     * Sort the provided array in ascending order using insertion sort.
      * <p>
      * The fusion sort has O(N log(N)) complexity.
      * The idea is to recursively divide the array in 2 sub arrays, sort then and then merge the result.

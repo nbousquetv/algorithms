@@ -3,7 +3,7 @@ package org.nbousquet.algorithms.common;
 public class InsertionSort {
 
     /**
-     * Sort the provide array in ascending order using insertion sort.
+     * Sort the provided array in ascending order using insertion sort.
      * <p>
      * The insertion sort has O(N^2) complexity.
      * It process the array by inserting element one by one in the already sorted array.
