@@ -1,6 +1,5 @@
 package org.nbousquet.algorithms.sort;
 
-import jdk.jshell.execution.Util;
 import org.nbousquet.algorithms.common.Utils;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -8,17 +7,18 @@ import java.util.concurrent.ThreadLocalRandom;
 public class QuickSort {
 
     /**
-     * Sort the provided array in ascending order using bubble sort.
+     * Sort the provided array in ascending order using randomized quick sort.
      * <p>
-     * The quick sort use a diver an conquer strategy. The principle is to select a index arbitrary (called pivot)
+     * The quick sort use a divide and conquer strategy. The principle is to select a index arbitrary (called pivot)
      * in the array and divide the array in 2 part. Numbers on the left of the pivot have to be smaller than the pivot.
-     * Numbers on the right of the pivot have to be greater than the pivot. Then repeat the algorithm on the 2
-     * partitions.
+     * Numbers on the right of the pivot have to be greater than the pivot. It possible to create such partition in
+     * linear time. Then repeat the algorithm on the partitions. If the pivot is chosen well, the the algorithm perform
+     * well.
      * <p>
-     * Complexity is O(N^2) for the worst case because efficiantly highly depend of the selected pivot. A good pivot
+     * Complexity is O(N^2) for the worst case because efficiancy highly depend of the selected pivot. A good pivot
      * will provide O(Nlog(N)) performance while using the worst possible pivot will give O(N^2) complexity.
      * This algorithm is still very interesting if the choice of the pivot is robust, as the constant factors
-     * behind the Nlog(N) complexity are small.
+     * behind the Nlog(N) complexity are small. Implementation here choose the pivot randomly.
      *
      * @param array array to sort
      */
@@ -49,10 +49,10 @@ public class QuickSort {
     }
 
     /**
-     * partition the provided array around a pivot. All element on the left of the pivot have lower values and
+     * Partition the provided array around a pivot. All elements on the left of the pivot have lower values and
      * all elements on the right have higher value.
      * <p>
-     * To be able to to that in place, the pivot is always the last element of the range and elements lower than the
+     * To be able to do that in place, the pivot is always the last element of the range and elements lower than the
      * pivot are put at the beginning, then the pivot is put after and its index is returned.
      * By definition all the elements that are still after are greater than the pivot.
      *
