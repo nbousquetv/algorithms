@@ -20,6 +20,9 @@ A production like lib would of course work on collections and arbitrary comparat
 - [Randomized 3 Way QuickSort](src/main/java/org/nbousquet/algorithms/sort/ThreeWayQuickSort.java)
 - [HeapSort](src/main/java/org/nbousquet/algorithms/sort/HeapSort.java)
 
+## Data Structures
+- [Basic Chained HashTable](src/main/java/org/nbousquet/algorithms/hashtable/HashTable.java)
+
 ## Getting the project and build it
 Clone the project, ensuire you have java (14 or greater) and mvn installed and type in your terminal:
 mvn clean install
