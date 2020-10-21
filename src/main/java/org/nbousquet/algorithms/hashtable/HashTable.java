@@ -1,4 +1,4 @@
-package org.nbousquet.algorithms.hastable;
+package org.nbousquet.algorithms.hashtable;
 
 /**
  * Basic implementation of a chained Hash Table.

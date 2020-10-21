@@ -2,7 +2,6 @@ package org.nbousquet.algorithms.hashtable;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.nbousquet.algorithms.hastable.HashTable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
