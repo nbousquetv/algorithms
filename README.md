@@ -9,8 +9,9 @@ There no interrest for one to use this as a lib, as all these algorithms are alr
 fully debugged, optimized and all. 
 
 As such while you'll find of course unit tests, and a continuous integration build thanks to github automation, 
-there no effort to be overly generic. We work on int arrays there and use the natural order comparator on int for simplicity. 
-A production like lib would of course work on collections and arbitrary comparators.
+there no effort to be overly generic. Some algorithms may work on a specific type like int and data structure may have only a few methods.
+
+A production like lib would of course work on collections and arbitrary comparators and provide a full API.
 
 ## Sorting algorithms
 - [Insertion Sort](src/main/java/org/nbousquet/algorithms/sort/InsertionSort.java)
@@ -22,9 +23,11 @@ A production like lib would of course work on collections and arbitrary comparat
 
 ## Data Structures
 - [Basic Chained HashTable](src/main/java/org/nbousquet/algorithms/hashtable/HashTable.java)
+- [Basic Binary Tree](src/main/java/org/nbousquet/algorithms/binarytree/BasicBinaryTree.java)
+ 
 
 ## Getting the project and build it
-Clone the project, ensuire you have java (14 or greater) and mvn installed and type in your terminal:
+Clone the project, ensure you have java (14 or greater) and mvn installed and type in your terminal:
 mvn clean install
 
 ## License
